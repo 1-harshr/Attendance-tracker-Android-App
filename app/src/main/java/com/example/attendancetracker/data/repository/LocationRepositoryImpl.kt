@@ -5,6 +5,7 @@ import android.location.LocationManager
 import com.example.attendancetracker.domain.model.LocationData
 import com.example.attendancetracker.domain.model.Result
 import com.example.attendancetracker.domain.repository.LocationRepository
+import com.example.attendancetracker.domain.repository.AttendanceRepository
 import com.example.attendancetracker.utils.LocationService
 import com.example.attendancetracker.utils.LocationUtils
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -25,7 +26,8 @@ import kotlin.coroutines.resume
 
 class LocationRepositoryImpl @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val fusedLocationClient: FusedLocationProviderClient
+    private val fusedLocationClient: FusedLocationProviderClient,
+    private val attendanceRepository: AttendanceRepository
 ) : LocationRepository {
     
     private val _currentLocation = MutableStateFlow<LocationData?>(null)
@@ -133,12 +135,33 @@ class LocationRepositoryImpl @Inject constructor(
                     val location = locationResult.data
                     _currentLocation.value = location
                     
-                    // TODO: Check if location is within office range
-                    // For now, we'll assume it's within range if we got a location
-                    _locationStatus.value = LocationService.LocationStatus.WITHIN_RANGE
+                    val gpsConfigResult = attendanceRepository.getGpsConfig()
+                    when (gpsConfigResult) {
+                        is Result.Success -> {
+                            val gpsConfig = gpsConfigResult.data
+                            val distance = calculateDistance(
+                                location.latitude,
+                                location.longitude,
+                                gpsConfig.officeLatitude,
+                                gpsConfig.officeLongitude
+                            )
+                            
+                            _locationStatus.value = if (distance <= gpsConfig.allowedRadius) {
+                                LocationService.LocationStatus.WITHIN_RANGE
+                            } else {
+                                LocationService.LocationStatus.OUT_OF_RANGE
+                            }
+                        }
+                        is Result.Error -> {
+                            _locationStatus.value = LocationService.LocationStatus.UNKNOWN
+                        }
+                        is Result.Loading -> {
+                            _locationStatus.value = LocationService.LocationStatus.LOADING
+                        }
+                    }
                 }
                 is Result.Error -> {
-                    if (locationResult.message?.contains("permission", ignoreCase = true) == true) {
+                    if (locationResult.message.contains("permission", ignoreCase = true)) {
                         _locationStatus.value = LocationService.LocationStatus.PERMISSION_DENIED
                     } else {
                         _locationStatus.value = LocationService.LocationStatus.UNKNOWN
