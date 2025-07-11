@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">उपस्थिति ट्रैकर</string>
+    
+    <!-- Navigation -->
+    <string name="dashboard">डैशबोर्ड</string>
+    <string name="attendance">उपस्थिति</string>
+    <string name="history">इतिहास</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    
+    <!-- Login Screen -->
+    <string name="login_title">लॉगिन</string>
+    <string name="employee_id">कर्मचारी आईडी</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login_button">लॉगिन करें</string>
+    <string name="logging_in">लॉगिन हो रहा है...</string>
+    <string name="login_failed">लॉगिन असफल</string>
+    <string name="invalid_credentials">गलत कर्मचारी आईडी या पासवर्ड</string>
+    <string name="network_error">नेटवर्क त्रुटि। कृपया पुनः प्रयास करें।</string>
+    
+    <!-- Dashboard Screen -->
+    <string name="welcome">स्वागत</string>
+    <string name="good_morning">सुप्रभात</string>
+    <string name="good_afternoon">नमस्कार</string>
+    <string name="good_evening">शुभ संध्या</string>
+    <string name="today_attendance">आज की उपस्थिति</string>
+    <string name="check_in">चेक इन</string>
+    <string name="check_out">चेक आउट</string>
+    <string name="checked_in">चेक इन हो गया</string>
+    <string name="checked_out">चेक आउट हो गया</string>
+    <string name="not_checked_in">चेक इन नहीं हुआ</string>
+    <string name="working_hours">कार्य घंटे</string>
+    <string name="working_hours_format">कार्य घंटे: %1$s</string>
+    <string name="check_in_time">चेक इन समय</string>
+    <string name="check_out_time">चेक आउट समय</string>
+    
+    <!-- Attendance Actions -->
+    <string name="mark_attendance">उपस्थिति चिह्नित करें</string>
+    <string name="attendance_marked_success">उपस्थिति सफलतापूर्वक चिह्नित की गई</string>
+    <string name="check_in_success">सफलतापूर्वक चेक इन हो गया</string>
+    <string name="check_out_success">सफलतापूर्वक चेक आउट हो गया</string>
+    <string name="attendance_error">उपस्थिति चिह्नित करने में असफल</string>
+    <string name="already_checked_in">आपने आज पहले ही चेक इन कर लिया है</string>
+    <string name="not_checked_in_yet">पहले चेक इन करना आवश्यक है</string>
+    
+    <!-- GPS and Location -->
+    <string name="gps_status">GPS स्थिति</string>
+    <string name="gps_in_range">आप कार्यालय परिसर के भीतर हैं</string>
+    <string name="gps_out_of_range">आप कार्यालय परिसर के बाहर हैं</string>
+    <string name="distance_format">दूरी: %1$d मीटर</string>
+    <string name="getting_location">स्थान प्राप्त कर रहे हैं...</string>
+    <string name="location_error">स्थान त्रुटि</string>
+    <string name="location_unavailable">स्थान अनुपलब्ध</string>
+    <string name="gps_disabled">उपस्थिति चिह्नित करने के लिए कृपया GPS सक्षम करें</string>
+    <string name="location_accuracy_low">स्थान सटीकता बहुत कम है</string>
+    
+    <!-- Location Permissions -->
+    <string name="location_permission_required">स्थान अनुमति आवश्यक</string>
+    <string name="location_permission_rationale">उपस्थिति चिह्नित करते समय कार्यालय में होने की पुष्टि के लिए इस ऐप को स्थान पहुंच की आवश्यकता है।</string>
+    <string name="grant_permission">अनुमति दें</string>
+    <string name="permission_denied">अनुमति अस्वीकार</string>
+    <string name="location_permission_denied">उपस्थिति चिह्नित करने के लिए स्थान अनुमति आवश्यक है</string>
+    
+    <!-- History Screen -->
+    <string name="attendance_history">उपस्थिति इतिहास</string>
+    <string name="this_month">इस महीने</string>
+    <string name="select_month">महीना चुनें</string>
+    <string name="present">उपस्थित</string>
+    <string name="absent">अनुपस्थित</string>
+    <string name="late">देर से</string>
+    <string name="half_day">आधा दिन</string>
+    <string name="no_attendance_records">कोई उपस्थिति रिकॉर्ड नहीं मिला</string>
+    <string name="loading_records">रिकॉर्ड लोड हो रहे हैं...</string>
+    <string name="refresh">ताज़ा करें</string>
+    <string name="total_days">कुल दिन</string>
+    <string name="present_days">उपस्थित दिन</string>
+    <string name="absent_days">अनुपस्थित दिन</string>
+    <string name="attendance_percentage">उपस्थिति प्रतिशत</string>
+    
+    <!-- Date and Time -->
+    <string name="today">आज</string>
+    <string name="yesterday">कल</string>
+    <string name="date_format">dd/MM/yyyy</string>
+    <string name="time_format">HH:mm</string>
+    <string name="datetime_format">dd/MM/yyyy HH:mm</string>
+    <string name="duration_format">%1$dघं %2$dमि</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_title">प्रोफ़ाइल</string>
+    <string name="employee_info">कर्मचारी जानकारी</string>
+    <string name="name">नाम</string>
+    <string name="email">ईमेल</string>
+    <string name="department">विभाग</string>
+    <string name="employee_id_label">कर्मचारी आईडी</string>
+    <string name="logout">लॉगआउट</string>
+    <string name="logout_confirmation">क्या आप वाकई लॉगआउट करना चाहते हैं?</string>
+    <string name="logout_success">सफलतापूर्वक लॉगआउट हो गया</string>
+    <string name="app_version">ऐप संस्करण</string>
+    <string name="settings">सेटिंग्स</string>
+    
+    <!-- Common Actions -->
+    <string name="ok">ठीक है</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="retry">पुनः प्रयास</string>
+    <string name="close">बंद करें</string>
+    <string name="back">वापस</string>
+    <string name="next">आगे</string>
+    <string name="done">हो गया</string>
+    <string name="loading">लोड हो रहा है...</string>
+    <string name="error">त्रुटि</string>
+    <string name="success">सफलता</string>
+    
+    <!-- Error Messages -->
+    <string name="something_went_wrong">कुछ गलत हुआ</string>
+    <string name="connection_error">कनेक्शन त्रुटि। कृपया अपना इंटरनेट जांचें।</string>
+    <string name="server_error">सर्वर त्रुटि। कृपया बाद में पुनः प्रयास करें।</string>
+    <string name="unauthorized_error">सत्र समाप्त। कृपया पुनः लॉगिन करें।</string>
+    <string name="timeout_error">अनुरोध समय समाप्त। कृपया पुनः प्रयास करें।</string>
+    <string name="unknown_error">एक अज्ञात त्रुटि हुई</string>
+    
+    <!-- Validation Messages -->
+    <string name="field_required">यह फ़ील्ड आवश्यक है</string>
+    <string name="invalid_employee_id">कृपया एक वैध कर्मचारी आईडी दर्ज करें</string>
+    <string name="password_too_short">पासवर्ड कम से कम 6 अक्षर का होना चाहिए</string>
+    <string name="invalid_email">कृपया एक वैध ईमेल पता दर्ज करें</string>
+    
+    <!-- Status Messages -->
+    <string name="no_internet">कोई इंटरनेट कनेक्शन नहीं</string>
+    <string name="offline_mode">ऑफ़लाइन मोड</string>
+    <string name="syncing">सिंक हो रहा है...</string>
+    <string name="sync_complete">सिंक पूरा</string>
+    <string name="sync_failed">सिंक असफल</string>
+    
+    <!-- Accessibility -->
+    <string name="content_description_profile_picture">प्रोफ़ाइल चित्र</string>
+    <string name="content_description_gps_status">GPS स्थिति संकेतक</string>
+    <string name="content_description_attendance_status">उपस्थिति स्थिति</string>
+    <string name="content_description_back_button">वापस</string>
+    <string name="content_description_menu">मेनू</string>
+    
+    <!-- Distance Units -->
+    <string name="meters">मीटर</string>
+    <string name="kilometers">किलोमीटर</string>
+    <string name="distance_away">%1$s दूर</string>
+    
+    <!-- Additional GPS and Location Strings -->
+    <string name="location_within_range">आप कार्यालय की सीमा के भीतर हैं</string>
+    <string name="location_out_of_range">आप कार्यालय की सीमा से बाहर हैं</string>
+    <string name="location_unknown">स्थान की स्थिति अज्ञात</string>
+    <string name="location_permission_explanation">इस ऐप को आपकी उपस्थिति ट्रैक करने के लिए स्थान की अनुमति की आवश्यकता है। कृपया स्थान की अनुमति दें।</string>
+    <string name="location_permission_denied_explanation">उपस्थिति ट्रैक करने के लिए स्थान की अनुमति आवश्यक है। कृपया इसे ऐप सेटिंग्स में सक्षम करें।</string>
+    <string name="enable_location_permission">स्थान की अनुमति सक्षम करें</string>
+    <string name="location_verified">स्थान सत्यापित</string>
+    <string name="move_closer_to_office">कार्यालय के करीब आएं</string>
+    <string name="enable_gps">GPS सक्षम करें</string>
+    <string name="try_again">फिर से कोशिश करें</string>
+    
+    <!-- Time Units -->
+    <string name="hours">घंटे</string>
+    <string name="minutes">मिनट</string>
+    <string name="seconds">सेकंड</string>
+    
+    <!-- Notifications -->
+    <string name="notification_check_in_reminder">चेक इन करना न भूलें!</string>
+    <string name="notification_check_out_reminder">चेक आउट करना न भूलें!</string>
+    <string name="notification_attendance_marked">उपस्थिति सफलतापूर्वक चिह्नित की गई</string>
+    
+    <!-- Empty States -->
+    <string name="empty_state_title">कोई डेटा उपलब्ध नहीं</string>
+    <string name="empty_state_subtitle">ताज़ा करने के लिए खींचें या बाद में पुनः प्रयास करें</string>
+    <string name="empty_attendance_history">इस अवधि के लिए कोई उपस्थिति रिकॉर्ड नहीं</string>
+    
+    <!-- Pull to Refresh -->
+    <string name="pull_to_refresh">ताज़ा करने के लिए खींचें</string>
+    <string name="release_to_refresh">ताज़ा करने के लिए छोड़ें</string>
+    <string name="refreshing">ताज़ा हो रहा है...</string>
+</resources> 
